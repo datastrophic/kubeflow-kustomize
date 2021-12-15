@@ -1,0 +1,11 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: kubeflow
+resources:
+# v1.4
+- github.com/kubeflow/manifests/common/kubeflow-namespace/base?ref=8478841cd2291ef1fad9e2dc4f4091772a38f197
+- github.com/kubeflow/manifests/common/kubeflow-roles/base?ref=8478841cd2291ef1fad9e2dc4f4091772a38f197
+- profiles/
+- central-dashboard/
+- notebooks/notebook-controller/
+- notebooks/jupyter-web-app/

@@ -1,0 +1,24 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: centraldashboard
+spec:
+  gateways:
+  - ingress/ingress-gateway
+  http:
+  - match:
+    - uri:
+        exact: /logout
+    name: logout
+    redirect:
+      uri: /oauth2/sign_out
+  - match:
+    - uri:
+        prefix: /
+    rewrite:
+      uri: /
+    route:
+    - destination:
+        host: centraldashboard.kubeflow.svc.cluster.local
+        port:
+          number: 80
