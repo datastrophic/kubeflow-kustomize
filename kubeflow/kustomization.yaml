@@ -6,6 +6,7 @@ resources:
 - github.com/kubeflow/manifests/common/kubeflow-namespace/base?ref=8478841cd2291ef1fad9e2dc4f4091772a38f197
 - github.com/kubeflow/manifests/common/kubeflow-roles/base?ref=8478841cd2291ef1fad9e2dc4f4091772a38f197
 - profiles/
+- pod-defaults/
 - central-dashboard/
 - notebooks/notebook-controller/
 - notebooks/jupyter-web-app/

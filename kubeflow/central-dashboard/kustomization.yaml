@@ -13,7 +13,7 @@ configMapGenerator:
   - CD_REGISTRATION_FLOW=true # WARNING: it is recommended to create profiles with manifests, use for evaluation purposes only
 
 patchesStrategicMerge:
-- virtual-service.yaml
+- patches/virtual-service.yaml
 
 patches:
 - patch: |-
